@@ -14,21 +14,23 @@ New Relic Pro or higher for full functionality
 New Relic PHP agent installed
 
 Features
-Mark Cache clear events on New Relic graphs 
-Mark Index events on New Relic graphs 
-Send log entries to New Relic Stack trace for log entries in New Relic 
-Send Magento exceptions to New Relic - Notice when your site has problems 
-Limit certain log and exception entries from logging to New Relic. Keep the 'noise' out, so you can focus on the real errors and events 
-Embed New Relic Graphs in your Dashboard. Make it easy to monitor your site performance directly from Magento admin 
-Retain in depth analytics in New Relic 
-Easy to install, 
-Easy to use Block admin access to be send metrics. Stop admin from scewing your apdex score! 
-Block specific modules to send metrics. 
-Ability to set named transactions 
-Ability to add module name to named transactions
+--------
+Mark Cache clear events on New Relic graphs <br/>
+Mark Index events on New Relic graphs <br/>
+Send log entries to New Relic Stack trace for log entries in New Relic <br/>
+Send Magento exceptions to New Relic - Notice when your site has problems <br/>
+Limit certain log and exception entries from logging to New Relic. Keep the 'noise' out, so you can focus on the real errors and events <br/>
+Embed New Relic Graphs in your Dashboard. Make it easy to monitor your site performance directly from Magento admin <br/>
+Retain in depth analytics in New Relic <br/>
+Easy to install, <br/>
+Easy to use Block admin access to be send metrics. Stop admin from scewing your apdex score! <br/>
+Block specific modules to send metrics. <br/>
+Ability to set named transactions <br/>
+Ability to add module name to named transactions</br>
+<br/>
 
 This is not an official New Relic product, and is not endorsed by New Relic. This module is currently given FREE
-
+</br>
 
 Change Log
 
