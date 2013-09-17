@@ -34,7 +34,7 @@ Change Log
 
 0.0.2 - Initial Public release.
 0.0.3 - Bug fix release 
-        - If 'Do Not record these log entries' was blank, then all system.log messages were ignored.
+        - If 'Do Not record these log entries' was blank, then all system.log messages were ignored
         - Fix typo in documentation. 
 0.0.4 - Bug fix release
         - Endless loop if error in config files. 
@@ -50,21 +50,13 @@ Change Log
 0.1.3 - Remove observer events that is part of a new development version
  
 
-Reproducing error for 0.0.4 bug release.
-In any app/etc/module/ config xml file place a depends to a non-existing module.
-
-
-
 See our other modules:
-
+----------------------
 Magento Gift Promotions: http://www.proxiblue.com.au/magento-gift-promotions.html
-
 The ultimate magento goft promotions module - clean code, and it just works!
 
 Magento Dynamic Category products: http://www.proxiblue.com.au/magento-dynamic-category-products.html
-
 Dynamically assign any product to a category, using just attributes. Easy to create any type of 'Shopy By...' categories.
 
 Magento Mapped Category Banners: http://www.proxiblue.com.au/magento-mapped-category-banners.html
-
 Map unlimited click areas on category banner images to products (or direct links) Use that lost retail space to sell!
