@@ -33,32 +33,32 @@ This is not an official New Relic product, and is not endorsed by New Relic. Thi
 </br>
 
 Change Log
-
-0.0.2 - Initial Public release.
-0.0.3 - Bug fix release 
-        - If 'Do Not record these log entries' was blank, then all system.log messages were ignored
-        - Fix typo in documentation. 
-0.0.4 - Bug fix release
-        - Endless loop if error in config files. 
-        - Endless loop of module dependency fails
-0.0.5 - change _writer method to public
-0.1.0 - Add ability to ignore admin
-      - Add ability to ignore modules
-      - Add ability to name transactions
-      - Add ability to add module name to named transactions
-      - Move config menu option to proxiblue tab
-0.1.1 - Bug Fix: #14 - Notice: undefined index 'class'
-0.1.2 - BUG Fix inverted exception exclusion logging   
-0.1.3 - Remove observer events that is part of a new development version
+----------
+0.0.2 - Initial Public release<br/>
+0.0.3 - Bug fix release <br/>
+        - If 'Do Not record these log entries' was blank, then all system.log messages were ignored<br/>
+        - Fix typo in documentation. <br/>
+0.0.4 - Bug fix release<br/>
+        - Endless loop if error in config files. <br/>
+        - Endless loop of module dependency fails<br/>
+0.0.5 - change _writer method to public<br/>
+0.1.0 - Add ability to ignore admin<br/>
+      - Add ability to ignore modules<br/>
+      - Add ability to name transactions<br/>
+      - Add ability to add module name to named transactions<br/>
+      - ove config menu option to proxiblue tab<br/>
+0.1.1 - Bug Fix: #14 - Notice: undefined index 'class'<br/>
+0.1.2 - BUG Fix inverted exception exclusion logging  <br/> 
+0.1.3 - Remove observer events that is part of a new development version<br/>
  
 
 See our other modules:
 ----------------------
-Magento Gift Promotions: http://www.proxiblue.com.au/magento-gift-promotions.html
+[Magento Gift Promotions](http://www.proxiblue.com.au/magento-gift-promotions.html)
 The ultimate magento goft promotions module - clean code, and it just works!
 
-Magento Dynamic Category products: http://www.proxiblue.com.au/magento-dynamic-category-products.html
+[Magento Dynamic Category products](http://www.proxiblue.com.au/magento-dynamic-category-products.html)
 Dynamically assign any product to a category, using just attributes. Easy to create any type of 'Shopy By...' categories.
 
-Magento Mapped Category Banners: http://www.proxiblue.com.au/magento-mapped-category-banners.html
+[Magento Mapped Category Banners](http://www.proxiblue.com.au/magento-mapped-category-banners.html)
 Map unlimited click areas on category banner images to products (or direct links) Use that lost retail space to sell!
