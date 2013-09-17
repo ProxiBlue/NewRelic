@@ -1,0 +1,19 @@
+0.0.2 - Initial Public release.
+0.0.3 - Bug fix release 
+        - If 'Do Not record these log entries' was blank, then all system.log messages were ignored.
+        - Fix typo in documentation. 
+0.0.4 - Bug fix release
+        - Endless loop if error in config files. 
+        - Endless loop of module dependency fails
+0.0.5 - change _writer method to public
+0.1.0 - Add ability to ignore admin
+      - Add ability to ignore modules
+      - Add ability to name transactions
+      - Add ability to add module name to named transactions
+      - Move config menu option to proxiblue tab
+0.1.1 - Bug Fix: #14 - Notice: undefined index 'class'
+
+
+Reproducing error for 0.0.4 bug release.
+In any app/etc/module/ config xml file place a depends to a non-existing module.
+

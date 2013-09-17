@@ -1,0 +1,6 @@
+/app/code/community/ProxiBlue/NewRelic 
+/app/etc/modules/ProxiBlue_NewRelic.xml 
+/app/design/adminhtml/default/default/template/dashboard/newrelic.phtml 
+/app/code/local/Mage/Core/Exception.php
+/js/newrelic.js
+ 
