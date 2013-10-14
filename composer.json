@@ -1,0 +1,25 @@
+{
+  "name":"proxiblue/newrelic",
+  "type":"magento-module",
+  "license":"OSL-3.0",
+  "homepage":"https://github.com/ProxiBlue/NewRelic",
+  "description":"Magento extension to integrate New Relic",
+  "authors":[
+    {
+      "name":"Lucas van Staden",
+      "email":"sales@proxiblue.com.au"
+    }
+  ],
+  "require":{
+    "magento-hackathon/magento-composer-installer":"*"
+  },
+  "extra":{
+    "map":[
+        ["/app/code/community/ProxiBlue/NewRelic/","/app/code/community/ProxiBlue/NewRelic/"] ,
+        ["/app/etc/modules/ProxiBlue_NewRelic.xml","/app/etc/modules/ProxiBlue_NewRelic.xml"], 
+        ["/app/design/adminhtml/default/default/template/dashboard/newrelic.phtml","/app/design/adminhtml/default/default/template/dashboard/newrelic.phtml"],
+        ["/app/code/local/Mage/Core/Exception.php","/app/code/local/Mage/Core/Exception.php"],
+        ["/js/newrelic.js","/js/newrelic.js"] 
+    ]
+  }
+}
