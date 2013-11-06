@@ -23,6 +23,7 @@ class ProxiBlue_NewRelic_Model_Log_System extends ProxiBlue_NewRelic_Model_Abstr
                 if ($event['priorityName'] == 'DEBUG' && Mage::getStoreConfig('newrelic/settings/system_log_ignore_debug')) {
                     return;
                 }
+                Mage::Helper('newrelic')->setAppName();
                 newrelic_notice_error($this->_eventType . ': [' . $event['priorityName'] . '] '. $event['message']);
             }
         }

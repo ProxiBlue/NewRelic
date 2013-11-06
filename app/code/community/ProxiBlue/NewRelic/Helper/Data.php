@@ -73,6 +73,7 @@ class ProxiBlue_NewRelic_Helper_Data extends Mage_Core_Helper_Abstract {
                 if(!is_numeric($value)){
                     throw new Exception('Metric value must be numeric value');
                 }
+                $this->setAppName();
                 return newrelic_custom_metric('Custom/'.$name, $value);
              } catch (Exception $e) {
                  Mage::logException($e);
@@ -100,6 +101,16 @@ class ProxiBlue_NewRelic_Helper_Data extends Mage_Core_Helper_Abstract {
             return true;
         }
         return false; // default - ignore none
+    }
+    
+    /**
+     * Helper function to set the application name used to report
+     */
+    public function setAppName(){
+        if (extension_loaded('newrelic')) {
+            $application_name = Mage::getStoreConfig('newrelic/api/application_name');
+            return newrelic_set_appname($application_name);
+        }
     }
 }
 
