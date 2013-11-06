@@ -12,6 +12,7 @@
       - Add ability to add module name to named transactions
       - Move config menu option to proxiblue tab
 0.1.1 - Bug Fix: #14 - Notice: undefined index 'class'
+0.1.3 - Add appname to agent commands
 
 
 Reproducing error for 0.0.4 bug release.
