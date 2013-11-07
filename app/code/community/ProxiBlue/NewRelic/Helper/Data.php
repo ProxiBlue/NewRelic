@@ -109,7 +109,8 @@ class ProxiBlue_NewRelic_Helper_Data extends Mage_Core_Helper_Abstract {
     public function setAppName(){
         if (extension_loaded('newrelic')) {
             $application_name = Mage::getStoreConfig('newrelic/api/application_name');
-            return newrelic_set_appname($application_name);
+            $license_key = Mage::getStoreConfig('newrelic/api/license_key');
+            return newrelic_set_appname($application_name,$license_key,true);
         }
     }
 }

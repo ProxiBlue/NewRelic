@@ -47,11 +47,15 @@ class ProxiBlue_NewRelic_Model_Api extends ProxiBlue_NewRelic_Model_Abstract {
         $response = Zend_Http_Response::extractBody($response);
         // parse the xml
         $xmlObj = simplexml_load_string($response);
-        $key = 'data-access-key';
-        $accountDetails = array('accountid'=>(string)$xmlObj->account->id,'accesskey'=>(string)$xmlObj->account->$key);
+        $accountDetails = array('accountid'=>(string)$xmlObj->account->id,
+                                'accesskey'=>(string)$xmlObj->account->{"data-access-key"},
+                                'licensekey'=>(string)$xmlObj->account->{"license-key"}
+                                );
         $config = new Mage_Core_Model_Config();
         $config ->saveConfig('newrelic/api/account_id', $accountDetails['accountid'], 'default', 0);
         $config ->saveConfig('newrelic/api/data_access_key', $accountDetails['accesskey'], 'default', 0);
+        $config ->saveConfig('newrelic/api/license_key', $accountDetails['licensekey'], 'default', 0);
+        
         return $accountDetails;
         
     }

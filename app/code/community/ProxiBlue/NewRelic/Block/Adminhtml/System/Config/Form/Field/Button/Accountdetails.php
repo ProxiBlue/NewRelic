@@ -19,7 +19,7 @@ class ProxiBlue_NewRelic_Block_Adminhtml_System_Config_Form_Field_Button_Account
         $html = $this->getLayout()->createBlock('adminhtml/widget_button')
                     ->setType('button')
                     ->setClass('scalable')
-                    ->setLabel('Fetch Account ID and Data Access Key')
+                    ->setLabel('Fetch Account Details')
                     ->setOnClick("fetchAccountDetails()")
                     ->toHtml();
 
