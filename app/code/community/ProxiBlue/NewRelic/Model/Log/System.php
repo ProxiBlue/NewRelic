@@ -30,5 +30,3 @@ class ProxiBlue_NewRelic_Model_Log_System extends ProxiBlue_NewRelic_Model_Abstr
     }
 
 }
-
-?>

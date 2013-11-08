@@ -86,5 +86,3 @@ class ProxiBlue_NewRelic_Model_Abstract {
     }
 
 }
-
-?>
