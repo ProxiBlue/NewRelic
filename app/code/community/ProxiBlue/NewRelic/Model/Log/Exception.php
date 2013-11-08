@@ -18,7 +18,7 @@ class ProxiBlue_NewRelic_Model_Log_Exception extends ProxiBlue_NewRelic_Model_Ab
      * @param Object $e
      */
     public function recordEvent($e) {
-        if(Mage::getStoreConfig('newrelic/settings/record_exception') && Mage::helper('newrelic')->ignoreMessage($e->getMessage(), 'exception')){
+        if(Mage::getStoreConfig('newrelic/settings/record_exception') && !Mage::helper('newrelic')->ignoreMessage($e->getMessage(), 'exception')){
                 self::pushEvent($e); 
         }    
     }
