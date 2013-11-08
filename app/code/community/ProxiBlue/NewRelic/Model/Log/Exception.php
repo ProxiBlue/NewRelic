@@ -39,5 +39,3 @@ class ProxiBlue_NewRelic_Model_Log_Exception extends ProxiBlue_NewRelic_Model_Ab
     }
     
 }
-
-?>

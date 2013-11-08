@@ -79,5 +79,3 @@ class ProxiBlue_NewRelic_Model_Api extends ProxiBlue_NewRelic_Model_Abstract {
     }
     
 }
-
-?>

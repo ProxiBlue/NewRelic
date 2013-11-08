@@ -13,5 +13,3 @@ class ProxiBlue_NewRelic_Model_Index extends ProxiBlue_NewRelic_Model_Abstract {
     protected $_eventType = 'Index';
     
 }
-
-?>
