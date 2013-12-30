@@ -82,7 +82,7 @@ class Mage_Core_Exception extends Exception {
         if ($this instanceof Mage_Core_Model_Store_Exception || $this instanceof ProxiBlue_NewRelic_Exception) {
             // this is a store or newrelic module exception
             // log this one direct to newrelic to prevent endless loop.
-            ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this);
+            ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this,false);
         } else {
             // determine if this is a Mage_Core_Model_Config exception, prevents endless loop
             $stackTrace = self::getTrace();
@@ -90,7 +90,7 @@ class Mage_Core_Exception extends Exception {
                 foreach($stackTrace as $_trace){
                     if(is_array($_trace) && array_key_exists('class',$_trace) && $_trace['class'] == 'Mage_Core_Model_Config') {
                         // some config issue, log it direct
-                        ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this);
+                        ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this,false);
                         return $this;
                     }
                 }

@@ -29,11 +29,13 @@ class ProxiBlue_NewRelic_Model_Log_Exception extends ProxiBlue_NewRelic_Model_Ab
      * 
      * @param type $e
      */
-    static public function pushEvent($e){
+    static public function pushEvent($e,$setAppName=true){
         if (extension_loaded('newrelic')) {
             $message = $e->getMessage();
             $message = (empty($message))?get_class($e):$message;
-            Mage::Helper('newrelic')->setAppName();
+            if($setAppName) {
+                Mage::Helper('newrelic')->setAppName();
+            }    
             newrelic_notice_error ($message, $e);
         }    
     }
