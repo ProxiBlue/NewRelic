@@ -50,6 +50,9 @@ Change Log
 0.1.1 - Bug Fix: #14 - Notice: undefined index 'class'<br/>
 0.1.2 - BUG Fix inverted exception exclusion logging  <br/> 
 0.1.3 - Remove observer events that is part of a new development version<br/>
+0.1.4 - Further adjustments to set correct appname when using the newrelic php agent commands
+      - Add license key field in admin, and adjust to populate correctly
+0.1.5 - Adjust Exception push to not set appName if error is pushed direct from exceptions.
  
 
 See our other modules:
