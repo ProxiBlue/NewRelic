@@ -48,9 +48,9 @@ function fetchAccountDetails() {
             }
             $('newrelic_api_account_id').value = json.accountid;
             $('newrelic_api_data_access_key').value = json.accesskey;
-            
-            
+            $('newrelic_api_license_key').value = json.licensekey;
         }
     });
 }
+
 

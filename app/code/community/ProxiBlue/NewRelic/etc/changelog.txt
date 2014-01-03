@@ -12,7 +12,10 @@
       - Add ability to add module name to named transactions
       - Move config menu option to proxiblue tab
 0.1.1 - Bug Fix: #14 - Notice: undefined index 'class'
-
+0.1.3 - Add appname to agent commands
+0.1.4 - Further adjustments to set correct appname when using the newrelic php agent commands
+      - Add license key field in admin, and adjust to populate correctly
+0.1.5 - Adjust Exception push to not set appName if error is pushed direct from exceptions.
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.

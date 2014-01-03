@@ -16,6 +16,7 @@ class ProxiBlue_NewRelic_Model_PreDispatch_Observer {
     public function controller_action_predispatch(Varien_Event_Observer $observer) {
         try {
             if (extension_loaded('newrelic')) {
+                Mage::Helper('newrelic')->setAppName();
                 $controllerAction = $observer->getControllerAction();
                 $request = $controllerAction->getRequest();
                 $controllerName = explode("_", $request->getControllerName());

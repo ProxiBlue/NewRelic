@@ -25,5 +25,9 @@ class ProxiBlue_NewRelic_TestController extends Mage_Core_Controller_Front_Actio
             $this->getResponse()->setBody(json_encode(array('error' => 'Invalid API key given')));
         }
     }
+    
+    public function exceptionAction(){
+        $this->_forward('exceptionLog');
+    }
 
 }
