@@ -6,6 +6,11 @@
         </ProxiBlue_NewRelic>
     </modules>
     <global>
+		<request>
+            <direct_front_name>
+                <newrelic/>
+            </direct_front_name>
+        </request>
         <models>
             <newrelic>
                 <class>ProxiBlue_NewRelic_Model</class>
