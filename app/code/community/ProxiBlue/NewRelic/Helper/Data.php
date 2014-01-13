@@ -22,7 +22,7 @@ class ProxiBlue_NewRelic_Helper_Data extends Mage_Core_Helper_Abstract {
             if (is_array($ignoreList) && count($ignoreList) > 0) {
                 array_walk($ignoreList, array($this, 'cleanIgnoreList'));
                 //$ignoreList = array_filter($ignoreList, 'strlen');
-                return !$this->ignoreInString($message, $ignoreList); 
+                return $this->ignoreInString($message, $ignoreList); 
             }
         } catch (Exception $e) {
             return true;
