@@ -16,7 +16,6 @@
   *    along with ProxiBlue NewRelic Module.  
   *    If not, see <http://www.gnu.org/licenses/>.
   **/
-?>
 
 /**
  * Magento Core Exception
@@ -26,6 +25,7 @@
  * @category   Mage
  * @package    Mage_Core
  */
+ 
 class Mage_Core_Exception extends Exception {
 
     protected $_messages = array();
