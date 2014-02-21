@@ -16,6 +16,9 @@
 0.1.4 - Further adjustments to set correct appname when using the newrelic php agent commands
       - Add license key field in admin, and adjust to populate correctly
 0.1.5 - Adjust Exception push to not set appName if error is pushed direct from exceptions.
+0.1.6 - Fix incorrect php closing tag - https://github.com/ProxiBlue/NewRelic/pull/10
+
+
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.
