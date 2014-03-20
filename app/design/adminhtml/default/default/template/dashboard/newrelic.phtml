@@ -1,9 +1,8 @@
-<?php
-
-?>
 <div style="margin:20px;">
     <?php foreach ($this->getEmbededGraphs() as $graphUrl): ?>
-        <iframe src="<?php echo trim($graphUrl['string']); ?>" width="100%" height="300" scrolling="no" frameborder="no"></iframe>
+        <object data="<?php echo trim($graphUrl['string']); ?>" width="100%" height="300">
+            <embed src="<?php echo trim($graphUrl['string']); ?>" width="100%" height="300"> </embed>
+            Error: Embedded data could not be displayed.
+        </object>
     <?php endforeach; ?>
-    
 </div>
