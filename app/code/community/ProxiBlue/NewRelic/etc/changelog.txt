@@ -18,7 +18,7 @@
 0.1.5 - Adjust Exception push to not set appName if error is pushed direct from exceptions.
 0.1.6 - Fix incorrect php closing tag - https://github.com/ProxiBlue/NewRelic/pull/10
 0.1.7 - Chnage way that charts are embeded into dashboard
-
+0.1.8 - Fix double >> in config.xml for closing tag
 
 
 Reproducing error for 0.0.4 bug release.

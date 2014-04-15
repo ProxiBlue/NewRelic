@@ -2,7 +2,7 @@
 <config>
     <modules>
         <ProxiBlue_NewRelic>
-            <version>0.1.7</version>
+            <version>0.1.8</version>
         </ProxiBlue_NewRelic>
     </modules>
     <global>
@@ -38,7 +38,7 @@
                         <type>singleton</type>
                         <class>newrelic/observer</class>
                         <method>adminhtml_cache_refresh_type</method>
-                    </newrelic_adminhtml_cache_refresh_type>>
+                    </newrelic_adminhtml_cache_refresh_type>
                 </observers>
             </adminhtml_cache_refresh_type>
             <controller_action_postdispatch_adminhtml_process_massReindex>
