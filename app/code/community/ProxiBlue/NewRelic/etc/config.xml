@@ -135,5 +135,14 @@
                 </args>
             </newrelic>
         </routers>
-    </frontend>    
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <newrelic>
+                    <file>newrelic.xml</file>
+                </newrelic>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>
