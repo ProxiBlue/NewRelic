@@ -19,7 +19,7 @@
 0.1.6 - Fix incorrect php closing tag - https://github.com/ProxiBlue/NewRelic/pull/10
 0.1.7 - Chnage way that charts are embeded into dashboard
 0.1.8 - Fix double >> in config.xml for closing tag
-
+0.1.9 - Fixed ajax requests for cases when store is installed into a subfolder
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.
