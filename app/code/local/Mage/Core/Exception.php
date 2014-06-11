@@ -89,11 +89,10 @@ class Mage_Core_Exception extends Exception {
                 }
             } 
             $newRelic = mage::getModel('newrelic/log_Exception');
-            // make sure we have an object here!
-            if(is_object($newRelic) && $newRelic instanceof ProxiBlue_NewRelic_Model_Log_Exception) {
+            // make sure we have an object here, and that the module is enabled
+            if(is_object($newRelic) && $newRelic instanceof ProxiBlue_NewRelic_Model_Log_Exception && $newRelic->getEnabled()) {
                 $newRelic->recordEvent($this);
             }    
-
         }
     }
 }
