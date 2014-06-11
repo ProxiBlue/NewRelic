@@ -1,21 +1,22 @@
-<?php       
-  /**
-  *    This file is part of ProxiBlue NewRelic Module  available via GitHub https://github.com/ProxiBlue/NewRelic     
-  *
-  *    ProxiBlue NewRelic Module is free software: you can redistribute it and/or modify
-  *    it under the terms of the GNU General Public License as published by
-  *    the Free Software Foundation, either version 3 of the License, or
-  *    (at your option) any later version.
-  *
-  *    ProxiBlue NewRelic Module is distributed in the hope that it will be useful,
-  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
-  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  *    GNU General Public License for more details.
-  *
-  *    You should have received a copy of the GNU General Public License
-  *    along with ProxiBlue NewRelic Module.  
-  *    If not, see <http://www.gnu.org/licenses/>.
-  **/
+<?php
+
+/**
+ *    This file is part of ProxiBlue NewRelic Module  available via GitHub https://github.com/ProxiBlue/NewRelic     
+ *
+ *    ProxiBlue NewRelic Module is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    ProxiBlue NewRelic Module is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with ProxiBlue NewRelic Module.  
+ *    If not, see <http://www.gnu.org/licenses/>.
+ * */
 
 /**
  * Magento Core Exception
@@ -25,7 +26,6 @@
  * @category   Mage
  * @package    Mage_Core
  */
- 
 class Mage_Core_Exception extends Exception {
 
     protected $_messages = array();
@@ -75,24 +75,31 @@ class Mage_Core_Exception extends Exception {
         if ($this instanceof Mage_Core_Model_Store_Exception || $this instanceof ProxiBlue_NewRelic_Exception) {
             // this is a store or newrelic module exception
             // log this one direct to newrelic to prevent endless loop.
-            ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this,false);
+            ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this, false);
         } else {
             // determine if this is a Mage_Core_Model_Config exception, prevents endless loop
             $stackTrace = self::getTrace();
-            if(is_array($stackTrace)){
-                foreach($stackTrace as $_trace){
-                    if(is_array($_trace) && array_key_exists('class',$_trace) && $_trace['class'] == 'Mage_Core_Model_Config') {
+            if (is_array($stackTrace)) {
+                $maxTraceItterations = 100;
+                // 100 seems like a safe test. If this test works, a config option would be created to allow users to set this.
+                foreach ($stackTrace as $_trace) {
+                    if($maxTraceItterations == 0) {
+                        break;
+                    }
+                    if (is_array($_trace) && array_key_exists('class', $_trace) && $_trace['class'] == 'Mage_Core_Model_Config') {
                         // some config issue, log it direct
-                        ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this,false);
+                        ProxiBlue_NewRelic_Model_Log_Exception::pushEvent($this, false);
                         return $this;
                     }
+                    $maxTraceItterations--;
                 }
-            } 
+            }
             $newRelic = mage::getModel('newrelic/log_Exception');
-            // make sure we have an object here, and that the module is enabled
-            if(is_object($newRelic) && $newRelic instanceof ProxiBlue_NewRelic_Model_Log_Exception && $newRelic->getEnabled()) {
+            // make sure we have an object here!
+            if (is_object($newRelic) && $newRelic instanceof ProxiBlue_NewRelic_Model_Log_Exception && $newRelic->getEnabled()) {
                 $newRelic->recordEvent($this);
-            }    
+            }
         }
     }
+
 }
