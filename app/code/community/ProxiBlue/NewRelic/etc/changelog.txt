@@ -1,9 +1,9 @@
 0.0.2 - Initial Public release.
-0.0.3 - Bug fix release 
+0.0.3 - Bug fix release
         - If 'Do Not record these log entries' was blank, then all system.log messages were ignored.
-        - Fix typo in documentation. 
+        - Fix typo in documentation.
 0.0.4 - Bug fix release
-        - Endless loop if error in config files. 
+        - Endless loop if error in config files.
         - Endless loop of module dependency fails
 0.0.5 - change _writer method to public
 0.1.0 - Add ability to ignore admin
@@ -21,6 +21,8 @@
 0.1.8 - Fix double >> in config.xml for closing tag
 0.1.9 - Fixed ajax requests for cases when store is installed into a subfolder
 0.1.10 - Deal better with store id not found when logging. Highlighted when commercebug module is also in use.
+0.1.11 - Modman and composer files missed
+0.1.12 - Remove activation of wishlist in setup. Not sure why it was there
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.

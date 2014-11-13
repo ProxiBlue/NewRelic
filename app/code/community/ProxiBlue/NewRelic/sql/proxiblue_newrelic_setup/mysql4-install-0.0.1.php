@@ -1,6 +1,6 @@
-<?php       
+<?php
   /**
-  *    This file is part of ProxiBlue NewRelic Module  available via GitHub https://github.com/ProxiBlue/NewRelic     
+  *    This file is part of ProxiBlue NewRelic Module  available via GitHub https://github.com/ProxiBlue/NewRelic
   *
   *    ProxiBlue NewRelic Module is free software: you can redistribute it and/or modify
   *    it under the terms of the GNU General Public License as published by
@@ -13,14 +13,11 @@
   *    GNU General Public License for more details.
   *
   *    You should have received a copy of the GNU General Public License
-  *    along with ProxiBlue NewRelic Module.  
+  *    along with ProxiBlue NewRelic Module.
   *    If not, see <http://www.gnu.org/licenses/>.
   **/
 ?>
 <?php
 $installer = $this;
 $installer->startSetup();
-
-$config = new Mage_Core_Model_Config();
-$config ->saveConfig('wishlist/general/active', 1, 'default', 0);
 $installer->endSetup();
