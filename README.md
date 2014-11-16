@@ -13,8 +13,8 @@ Requirements:
 New Relic Pro or higher for full functionality
 New Relic PHP agent installed
 
-Multiple APplication Names After install
-========================================
+Multiple Application Names After install
+----------------------------------------
 
 A few users have noted that after the module was installed, a new application name appeared in NewRelic.
 Please see the answer on issue #17 which explains why this is happening (see the last answer by ProxiBlue)
