@@ -23,6 +23,7 @@
 0.1.10 - Deal better with store id not found when logging. Highlighted when commercebug module is also in use.
 0.1.11 - Modman and composer files missed
 0.1.12 - Remove activation of wishlist in setup. Not sure why it was there
+0.1.13 - Fix issue where admin pages are still sent to newrelic, even when admin is set to not log admin pages
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.
