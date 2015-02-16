@@ -41,7 +41,7 @@ Ability to add module name to named transactions</br>
 This is not an official New Relic product, and is not endorsed by New Relic. This module is currently given FREE
 </br>
 
-Compatibility with Firegentoo Logger
+Compatibility with Firegento Logger
 ------------------------------------
 ref: https://github.com/firegento/firegento-logger
 
@@ -68,8 +68,7 @@ and change it to
             </core>
         </log>
         
-After this change you will find an entry for the ProxiBlue NewRelic Logger in the Firegentoo Logger list of available loggers, and you can then controll logging to newRelic via the Inchoo Logger system
-
+After this change you will find an entry for the ProxiBlue NewRelic Logger in the Firegento Logger list of available loggers, and you can then control logging to newRelic via the Firegento Logger system
 
 
 See our other modules:
