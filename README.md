@@ -41,31 +41,36 @@ Ability to add module name to named transactions</br>
 This is not an official New Relic product, and is not endorsed by New Relic. This module is currently given FREE
 </br>
 
-Change Log
-----------
-0.0.2 - Initial Public release.
-0.0.3 - Bug fix release 
-        - If 'Do Not record these log entries' was blank, then all system.log messages were ignored.
-        - Fix typo in documentation. 
-0.0.4 - Bug fix release
-        - Endless loop if error in config files. 
-        - Endless loop of module dependency fails
-0.0.5 - change _writer method to public
-0.1.0 - Add ability to ignore admin
-      - Add ability to ignore modules
-      - Add ability to name transactions
-      - Add ability to add module name to named transactions
-      - Move config menu option to proxiblue tab
-0.1.1 - Bug Fix: #14 - Notice: undefined index 'class'
-0.1.3 - Add appname to agent commands
-0.1.4 - Further adjustments to set correct appname when using the newrelic php agent commands
-      - Add license key field in admin, and adjust to populate correctly
-0.1.5 - Adjust Exception push to not set appName if error is pushed direct from exceptions.
-0.1.6 - Fix incorrect php closing tag - https://github.com/ProxiBlue/NewRelic/pull/10
-0.1.7 - Change way that charts are embeded into dashboard
-0.1.8 - Fix double >> in config.xml for closing tag
-0.1.9 - Fixed ajax requests for cases when store is installed into a subfolder
- 
+Compatibility with Firegentoo Logger
+------------------------------------
+ref: https://github.com/firegento/firegento-logger
+
+Edit the config.xml file of the ProxiBlue module.
+Find the entry for the log writer.
+
+        <log>
+            <core>
+                <writer_model>ProxiBlue_NewRelic_Model_Log_Writer_Stream</writer_model>
+            </core>
+        </log>
+
+and change it to 
+
+        <log>
+            <core>
+                <!-- <writer_model>ProxiBlue_NewRelic_Model_Log_Writer_Stream</writer_model> -->
+                <writer_models>
+                    <newrelic>
+                        <label>ProxiBlue NewRelic Logger</label>
+                        <class>ProxiBlue_NewRelic_Model_Log_Writer_Stream</class>
+                    </newrelic>
+                </writer_models>
+            </core>
+        </log>
+        
+After this change you will find an entry for the ProxiBlue NewRelic Logger in the Firegentoo Logger list of available loggers, and you can then controll logging to newRelic via the Inchoo Logger system
+
+
 
 See our other modules:
 ----------------------
