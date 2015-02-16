@@ -17,7 +17,7 @@ Multiple Application Names After install
 ----------------------------------------
 
 A few users have noted that after the module was installed, a new application name appeared in NewRelic.
-Please see the answer on issue #17 which explains why this is happening (see the last answer by ProxiBlue)
+Please see the answer on issue #11 which explains why this is happening (see the last answer by ProxiBlue)
 
 The sweet and short: Make sure your application name in the newrelic agent ini is correct.
 
