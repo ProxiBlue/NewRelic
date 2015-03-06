@@ -14,8 +14,9 @@ New Relic Pro or higher for full functionality
 New Relic PHP agent installed
 PHP5.3+
 
-Can be made compatible to older magento versions (php5.2), with a bit of chnages. 
-Refer to #22 (if you do this, and find more changes, please feed back changes for other users)
+Can be made compatible to older magento versions (php5.2), with a bit of chnages.
+
+Refer to https://github.com/ProxiBlue/NewRelic/issues/22 (if you do this, and find more changes, please feed back changes for other users)
 
 Multiple Application Names After install
 ----------------------------------------
