@@ -8,10 +8,14 @@ This module will allow in depth connection between the amazing New Relic Perform
 Uses the awesome New Relic API to submit and collect data.
 Notice immediately what your Magento site is up to, and how it affects your site performance.
 
-Compatible with Magento CE 1.4+ and EE 1.10+
+Compatible with Magento CE 1.6+ and EE 1.11+
 Requirements:
 New Relic Pro or higher for full functionality
 New Relic PHP agent installed
+PHP5.3+
+
+Can be made compatible to older magento versions (php5.2), with a bit of chnages. 
+Refer to #22 (if you do this, and find more changes, please feed back changes for other users)
 
 Multiple Application Names After install
 ----------------------------------------
