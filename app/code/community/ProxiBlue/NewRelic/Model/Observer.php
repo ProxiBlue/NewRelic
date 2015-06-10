@@ -37,7 +37,7 @@ class ProxiBlue_NewRelic_Model_Observer {
     public function adminhtml_cache_refresh_type(Varien_Event_Observer $observer) {
         if (Mage::getStoreConfig('newrelic/settings/record_cache')) {
             $event = $observer->getEvent();
-            $newRelic = Mage::getModel('newrelic/cache');
+            $newRelic = Mage::getModel('proxiblue_newrelic/cache');
             $newRelic->recordEvent($event->getType());
             return $this;
         }
@@ -51,7 +51,7 @@ class ProxiBlue_NewRelic_Model_Observer {
     public function adminhtml_cache_flush_all(Varien_Event_Observer $observer) {
         if (Mage::getStoreConfig('newrelic/settings/record_cache')) {
             $event = $observer->getEvent();
-            $newRelic = Mage::getModel('newrelic/cache');
+            $newRelic = Mage::getModel('proxiblue_newrelic/cache');
             $newRelic->recordEvent('Storage');
             return $this;
         }
@@ -64,7 +64,7 @@ class ProxiBlue_NewRelic_Model_Observer {
 
     public function adminhtml_cache_flush_system(Varien_Event_Observer $observer) {
         if (Mage::getStoreConfig('newrelic/settings/record_cache')) {
-            $newRelic = Mage::getModel('newrelic/cache');
+            $newRelic = Mage::getModel('proxiblue_newrelic/cache');
             $newRelic->recordEvent('Full Flush');
             return $this;
         }
@@ -77,7 +77,7 @@ class ProxiBlue_NewRelic_Model_Observer {
 
     public function clean_media_cache_after(Varien_Event_Observer $observer) {
         if (Mage::getStoreConfig('newrelic/settings/record_cache')) {
-            $newRelic = Mage::getModel('newrelic/cache');
+            $newRelic = Mage::getModel('proxiblue_newrelic/cache');
             $newRelic->recordEvent('CSS/JS');
             return $this;
         }
@@ -91,7 +91,7 @@ class ProxiBlue_NewRelic_Model_Observer {
 
     public function clean_catalog_images_cache_after(Varien_Event_Observer $observer) {
         if (Mage::getStoreConfig('newrelic/settings/record_cache')) {
-            $newRelic = Mage::getModel('newrelic/cache');
+            $newRelic = Mage::getModel('proxiblue_newrelic/cache');
             $newRelic->recordEvent('media');
             return $this;
         }
@@ -111,7 +111,7 @@ class ProxiBlue_NewRelic_Model_Observer {
             if (empty($aProcessIds) || !is_array($aProcessIds)) {
                 return $this;
             } else {
-                $newRelic = Mage::getModel('newrelic/index');
+                $newRelic = Mage::getModel('proxiblue_newrelic/index');
                 try {
                     $indexer = Mage::getSingleton('index/indexer');
                     foreach ($aProcessIds as $processId) {

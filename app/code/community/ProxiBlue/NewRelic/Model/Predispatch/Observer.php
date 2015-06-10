@@ -40,13 +40,13 @@ class ProxiBlue_NewRelic_Model_PreDispatch_Observer {
                 $request = $controllerAction->getRequest();
                 $controllerName = explode("_", $request->getControllerName());
                 if (Mage::getStoreConfig('newrelic/settings/ignore_admin_routes') && $request->getRouteName() == 'adminhtml' || $request->getModuleName() == 'admin' || in_array('adminhtml', $controllerName)) {
-                    Mage::Helper('newrelic')->setAppName(false);
+                    Mage::helper('proxiblue_newrelic')->setAppName(false);
                     newrelic_ignore_transaction();
                     newrelic_ignore_apdex();
                     return $this;
                 }
-                if (mage::helper('newrelic')->ignoreModule($request->getModuleName()) === true) {
-                    Mage::Helper('newrelic')->setAppName(false);
+                if (mage::helper('proxiblue_newrelic')->ignoreModule($request->getModuleName()) === true) {
+                    Mage::helper('proxiblue_newrelic')->setAppName(false);
                     newrelic_ignore_transaction();
                     newrelic_ignore_apdex();
                     return $this;
@@ -57,7 +57,7 @@ class ProxiBlue_NewRelic_Model_PreDispatch_Observer {
                         $route .= ' (module: ' . $request->getModuleName() . ')';
                     }
                     newrelic_name_transaction($route);
-                    Mage::Helper('newrelic')->setAppName(true);
+                    Mage::helper('proxiblue_newrelic')->setAppName(true);
                     return $this;
                 }
             }

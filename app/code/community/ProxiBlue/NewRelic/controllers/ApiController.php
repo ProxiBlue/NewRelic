@@ -23,8 +23,8 @@ class ProxiBlue_NewRelic_ApiController extends Mage_Core_Controller_Front_Action
 
     
     public function namesAction() {
-        if(Mage::helper('newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
-            $newRelicApi = Mage::getModel('newrelic/api');
+        if(Mage::helper('proxiblue_newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
+            $newRelicApi = Mage::getModel('proxiblue_newrelic/api');
             $applications = $newRelicApi->getApplications();
             $this->getResponse()->setHeader('Content-type', 'application/json');
             $this->getResponse()->setBody(json_encode(array('result'=>$applications)));
@@ -36,8 +36,8 @@ class ProxiBlue_NewRelic_ApiController extends Mage_Core_Controller_Front_Action
     }
     
     public function accountDetailsAction() {
-        if(Mage::helper('newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
-            $newRelicApi = Mage::getModel('newrelic/api');
+        if(Mage::helper('proxiblue_newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
+            $newRelicApi = Mage::getModel('proxiblue_newrelic/api');
             $accountDetails = $newRelicApi->getAccountDetails();
             $this->getResponse()->setHeader('Content-type', 'application/json');
             $this->getResponse()->setBody(json_encode($accountDetails));

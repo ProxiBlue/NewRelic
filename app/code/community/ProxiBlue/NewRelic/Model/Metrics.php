@@ -36,7 +36,7 @@ class ProxiBlue_NewRelic_Model_Metrics {
 
     public function customer_register_success(Varien_Event_Observer $observer) {
         if (Mage::getStoreConfig('newrelic/metrics/signup_success')) {
-            Mage::helper('newrelic')->customMetric('Registration/Success',1);
+            Mage::helper('proxiblue_newrelic')->customMetric('Registration/Success',1);
             return $this;
         }
     }

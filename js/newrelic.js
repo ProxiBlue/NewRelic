@@ -10,7 +10,7 @@ Array.prototype.remove = function() {
 };
 
 function fetchApplicationNames() {
-    new Ajax.Request(newrelic_base_url + 'newrelic/api/names/key/'+$('newrelic_api_api_key').value, {
+    new Ajax.Request(newrelic_base_url + 'proxiblue_newrelic/api/names/key/'+$('newrelic_api_api_key').value, {
         onSuccess: function(response) {
             var json = response.responseText.evalJSON();
             if(json.error) {
@@ -39,7 +39,7 @@ function fetchApplicationNames() {
 }
 
 function fetchAccountDetails() {
-    new Ajax.Request(newrelic_base_url + 'newrelic/api/accountDetails/key/'+$('newrelic_api_api_key').value, {
+    new Ajax.Request(newrelic_base_url + 'proxiblue_newrelic/api/accountDetails/key/'+$('newrelic_api_api_key').value, {
         onSuccess: function(response) {
             var json = response.responseText.evalJSON();
             if(json.error) {

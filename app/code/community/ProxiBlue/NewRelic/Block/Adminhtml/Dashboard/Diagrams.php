@@ -37,7 +37,7 @@ class ProxiBlue_NewRelic_Block_Adminhtml_Dashboard_Diagrams extends Mage_Adminht
         if (Mage::getStoreConfig('newrelic/embeded/enabled')) {
             $this->addTab('newrelic', array(
                 'label'     => $this->__('NewRelic'),
-                'content'   => $this->getLayout()->createBlock('newrelic/adminhtml_dashboard_tab_newrelic')->toHtml(),
+                'content'   => $this->getLayout()->createBlock('proxiblue_newrelic/adminhtml_dashboard_tab_newrelic')->toHtml(),
             ));
         }
         return $this;

@@ -38,7 +38,7 @@ class ProxiBlue_NewRelic_Model_Log_System extends ProxiBlue_NewRelic_Model_Abstr
      */
     public function recordEvent($event) {
         if (extension_loaded('newrelic')) {
-            if (Mage::getStoreConfig('newrelic/settings/record_system_log') && !Mage::helper('newrelic')->ignoreMessage($event['message'], 'system_log')) {
+            if (Mage::getStoreConfig('newrelic/settings/record_system_log') && !Mage::helper('proxiblue_newrelic')->ignoreMessage($event['message'], 'system_log')) {
                 if ($event['priorityName'] == 'DEBUG' && Mage::getStoreConfig('newrelic/settings/system_log_ignore_debug')) {
                     return;
                 }

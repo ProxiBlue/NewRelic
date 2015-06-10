@@ -33,11 +33,11 @@ class ProxiBlue_NewRelic_Block_Adminhtml_System_Config_Form_Field_Graphurl
     public function __construct()
     {
         $this->addColumn('string', array(
-            'label' => Mage::helper('newrelic')->__('String'),
+            'label' => Mage::helper('proxiblue_newrelic')->__('String'),
             'style' => 'width:300px',
         ));
         $this->_addAfter = false;
-        $this->_addButtonLabel = Mage::helper('newrelic')->__('Add New Graph');
+        $this->_addButtonLabel = Mage::helper('proxiblue_newrelic')->__('Add New Graph');
         parent::__construct();
     }
 }
