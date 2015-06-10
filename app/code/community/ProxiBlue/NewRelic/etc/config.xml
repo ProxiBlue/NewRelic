@@ -8,7 +8,7 @@
     <global>
         <request>
             <direct_front_name>
-                <newrelic/>
+                <proxiblue_newrelic/>
             </direct_front_name>
         </request>
         <models>

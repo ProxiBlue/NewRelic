@@ -26,7 +26,7 @@
                     <fields>
                         <api_key translate="label">
                             <label>API Key</label>
-                            <comment><![CDATA[<a target="_blank" href="http://www.proxiblue.com.au/newrelic-how-to-get-api-key">How to find your API Key</a> Remember to click 'Save Config' after chnaged or else the buttons below will not work.]]></comment>
+                            <comment><![CDATA[<a target="_blank" href="http://www.proxiblue.com.au/newrelic-how-to-get-api-key">How to find your API Key</a> <strong>Remember to click 'Save Config' after changed or else the buttons below will not work</strong>]]></comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
@@ -37,7 +37,7 @@
                             <label>Fetch Account Details</label>
                             <comment><![CDATA[Click to fetch your Account Details]]></comment>
                             <frontend_type>button</frontend_type>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_button_accountdetails</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_button_accountdetails</frontend_model>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -71,7 +71,7 @@
                             <label>Update Application Names</label>
                             <comment><![CDATA[Click to update the list of valid application names configured in Newrelic]]></comment>
                             <frontend_type>button</frontend_type>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_button_appnames</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_button_appnames</frontend_model>
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -81,7 +81,7 @@
                             <label>Application Name</label>
                             <comment><![CDATA[The application name to use.]]></comment>
                             <frontend_type>select</frontend_type>
-                            <source_model>newrelic/adminhtml_system_config_source_select_appnames</source_model>
+                            <source_model>proxiblue_newrelic/adminhtml_system_config_source_select_appnames</source_model>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -129,7 +129,7 @@
                         </record_system_log>
                         <system_log_ignore_message translate="label">
                             <label>Do not record these log entries</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -159,7 +159,7 @@
                         </record_exception>
                         <exception_ignore_message translate="label">
                             <label>Do not record these exceptions</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
@@ -199,7 +199,7 @@
                         </ignore_admin_routes>
                         <ignore_modules translate="label">
                             <label>Do not record these modules requests</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_ignoremodule</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_ignoremodule</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>12</sort_order>
                             <show_in_default>1</show_in_default>
@@ -249,7 +249,7 @@
                         </enabled>
                         <graph translate="label">
                             <label>Graph urls to display in dashboard tab</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_graphurl</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_graphurl</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
