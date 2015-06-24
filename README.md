@@ -78,9 +78,9 @@ After this change you will find an entry for the ProxiBlue NewRelic Logger in th
 
 Premium extentions:
 ----------------------
-[Magento Free Gift Promotions](http://www.proxiblue.com.au/magento-gift-promotions.html)
+[Magento Free Gift Promotions](http://www.proxiblue.com.au/magento-gift-promotions.html "Magento Free Gift Promotions")
 The ultimate magento gift promotions module - clean code, and it just works!
 
-[Magento Dynamic Category products](http://www.proxiblue.com.au/magento-dynamic-category-products.html)
+[Magento Dynamic Category Products](http://www.proxiblue.com.au/magento-dynamic-category-products.html "Magento Dynamic Category Products")
 Automate Category Product associations - assign any product to a category, using various rules.
 
