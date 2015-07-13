@@ -25,6 +25,7 @@
 0.1.12 - Remove activation of wishlist in setup. Not sure why it was there
 0.1.13 - Fix issue where admin pages are still sent to newrelic, even when admin is set to not log admin pages
 0.1.14 - Move namespace to proxiblue_newrelic
+0.1.15 - Add ability to trace methods. some error trapping in account details fetching
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.
