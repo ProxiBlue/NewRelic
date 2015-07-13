@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <config>
     <tabs>
-        <proxiblue translate="label" module="newrelic">
+        <proxiblue translate="label" module="proxiblue_newrelic">
             <label><![CDATA[<div style="background:url(data:image/png;base64,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) no-repeat; width: 155px; height: 20px;"></div>]]></label>
             <sort_order>10000000</sort_order>
         </proxiblue>
     </tabs>
     <sections>
-        <newrelic translate="label" module="newrelic">
+        <newrelic translate="label" module="proxiblue_newrelic">
             <label>NewRelic</label>
             <tab>proxiblue</tab>
             <frontend_type>text</frontend_type>
@@ -26,7 +26,7 @@
                     <fields>
                         <api_key translate="label">
                             <label>API Key</label>
-                            <comment><![CDATA[<a target="_blank" href="http://www.proxiblue.com.au/newrelic-how-to-get-api-key">How to find your API Key</a> Remember to click 'Save Config' after chnaged or else the buttons below will not work.]]></comment>
+                            <comment><![CDATA[<a target="_blank" href="http://www.proxiblue.com.au/newrelic-how-to-get-api-key">How to find your API Key</a> <strong>Remember to click 'Save Config' after changed or else the buttons below will not work</strong>]]></comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
@@ -37,7 +37,7 @@
                             <label>Fetch Account Details</label>
                             <comment><![CDATA[Click to fetch your Account Details]]></comment>
                             <frontend_type>button</frontend_type>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_button_accountdetails</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_button_accountdetails</frontend_model>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -71,7 +71,7 @@
                             <label>Update Application Names</label>
                             <comment><![CDATA[Click to update the list of valid application names configured in Newrelic]]></comment>
                             <frontend_type>button</frontend_type>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_button_appnames</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_button_appnames</frontend_model>
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -81,7 +81,7 @@
                             <label>Application Name</label>
                             <comment><![CDATA[The application name to use.]]></comment>
                             <frontend_type>select</frontend_type>
-                            <source_model>newrelic/adminhtml_system_config_source_select_appnames</source_model>
+                            <source_model>proxiblue_newrelic/adminhtml_system_config_source_select_appnames</source_model>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -129,7 +129,7 @@
                         </record_system_log>
                         <system_log_ignore_message translate="label">
                             <label>Do not record these log entries</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -159,7 +159,7 @@
                         </record_exception>
                         <exception_ignore_message translate="label">
                             <label>Do not record these exceptions</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_ignoremessage</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
@@ -199,7 +199,7 @@
                         </ignore_admin_routes>
                         <ignore_modules translate="label">
                             <label>Do not record these modules requests</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_ignoremodule</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_ignoremodule</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>12</sort_order>
                             <show_in_default>1</show_in_default>
@@ -207,6 +207,16 @@
                             <show_in_store>1</show_in_store>
                             <comment><![CDATA[Add module names to not to record in NewRelic.<br/>To find the correct module name]]></comment>
                         </ignore_modules>
+                        <custom_tracers translate="label">
+                            <label>Custom Tracers</label>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_tracers</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Add tracers to newrelic for the class methods. Format must be class::method]]></comment>
+                        </custom_tracers>
                     </fields>
                 </settings>
                 <metrics translate="label"> 
@@ -249,7 +259,7 @@
                         </enabled>
                         <graph translate="label">
                             <label>Graph urls to display in dashboard tab</label>
-                            <frontend_model>newrelic/adminhtml_system_config_form_field_graphurl</frontend_model>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_graphurl</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>

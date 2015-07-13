@@ -8,7 +8,7 @@
 		            <children>
 		                <config>
 		                    <children>
-		                        <newrelic translate="title" module="newrelic">
+		                        <newrelic translate="title" module="proxiblue_newrelic">
 		                            <title>NewRelic</title>
 		                        </newrelic>
 		                    </children>

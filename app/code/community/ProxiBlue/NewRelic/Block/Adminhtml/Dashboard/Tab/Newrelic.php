@@ -38,7 +38,7 @@ class ProxiBlue_NewRelic_Block_Adminhtml_Dashboard_Tab_Newrelic extends Mage_Adm
     {
         $this->setHtmlId('newrelic');
         parent::__construct();
-        $this->setTemplate('dashboard/newrelic.phtml');
+        $this->setTemplate('dashboard/proxiblue_newrelic.phtml');
     }
 
     public function getEmbededGraphs(){

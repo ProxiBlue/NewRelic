@@ -22,7 +22,7 @@
 class ProxiBlue_NewRelic_TestController extends Mage_Core_Controller_Front_Action {
 
     public function systemLogAction() {
-        if (Mage::helper('newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
+        if (Mage::helper('proxiblue_newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
             Mage::log('This is a newrelic test system log entry');
             die('Test log Entry done. Wait a moment and check newrelic errors.');
         } else {
@@ -32,7 +32,7 @@ class ProxiBlue_NewRelic_TestController extends Mage_Core_Controller_Front_Actio
     }
 
     public function exceptionLogAction() {
-        if (Mage::helper('newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
+        if (Mage::helper('proxiblue_newrelic')->testApiKey($this->getRequest()->getParam('key'))) {
             try {
                 Mage::throwException('Test exception thrown');
             } catch (Exception $e) {

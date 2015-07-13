@@ -33,11 +33,11 @@ class ProxiBlue_NewRelic_Block_Adminhtml_System_Config_Form_Field_Ignoremodule
     public function __construct()
     {
         $this->addColumn('string', array(
-            'label' => Mage::helper('newrelic')->__('Module Name'),
+            'label' => Mage::helper('proxiblue_newrelic')->__('Module Name'),
             'style' => 'width:200px',
         ));
         $this->_addAfter = false;
-        $this->_addButtonLabel = Mage::helper('newrelic')->__('Add New Ignore');
+        $this->_addButtonLabel = Mage::helper('proxiblue_newrelic')->__('Add New Ignore');
         parent::__construct();
     }
 }

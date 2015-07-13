@@ -20,24 +20,24 @@
 <?php
 
 /**
- * Form Field Graph Url
+ * Admin form field Ignore Message
  * 
  * @category   ProxiBlue
  * @package    ProxiBlue_NewRelic
  * @author     Lucas van Staden (support@proxiblue.com.au)
  **/
 
-class ProxiBlue_NewRelic_Block_Adminhtml_System_Config_Form_Field_Graphurl
+class ProxiBlue_NewRelic_Block_Adminhtml_System_Config_Form_Field_Tracers
     extends Mage_Adminhtml_Block_System_Config_Form_Field_Array_Abstract
 {
     public function __construct()
     {
         $this->addColumn('string', array(
-            'label' => Mage::helper('proxiblue_newrelic')->__('String'),
-            'style' => 'width:300px',
+            'label' => Mage::helper('proxiblue_newrelic')->__('class::method'),
+            'style' => 'width:400px',
         ));
         $this->_addAfter = false;
-        $this->_addButtonLabel = Mage::helper('proxiblue_newrelic')->__('Add New Graph');
+        $this->_addButtonLabel = Mage::helper('proxiblue_newrelic')->__('New Tracer');
         parent::__construct();
     }
 }

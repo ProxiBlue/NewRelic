@@ -2,7 +2,7 @@
 <layout version="0.1.0">
     <default>
         <reference name="before_body_end">
-            <block name="newrelic_js_init" type="core/template" template="newrelic/init_js.phtml"/>
+            <block name="newrelic_js_init" type="core/template" template="proxiblue_newrelic/init_js.phtml"/>
         </reference>
     </default>
 </layout>
