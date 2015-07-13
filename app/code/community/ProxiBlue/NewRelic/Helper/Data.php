@@ -132,4 +132,9 @@ class ProxiBlue_NewRelic_Helper_Data extends Mage_Core_Helper_Abstract {
             return newrelic_set_appname($application_name,$license_key,$xmit);
         }
     }
+
+    public function is_enabled(){
+        return  Mage::getStoreConfig('newrelic/api/is_enabled');
+    }
+
 }

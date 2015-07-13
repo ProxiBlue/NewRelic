@@ -207,6 +207,16 @@
                             <show_in_store>1</show_in_store>
                             <comment><![CDATA[Add module names to not to record in NewRelic.<br/>To find the correct module name]]></comment>
                         </ignore_modules>
+                        <custom_tracers translate="label">
+                            <label>Custom Tracers</label>
+                            <frontend_model>proxiblue_newrelic/adminhtml_system_config_form_field_tracers</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Add tracers to newrelic for the class methods. Format must be class::method]]></comment>
+                        </custom_tracers>
                     </fields>
                 </settings>
                 <metrics translate="label"> 
