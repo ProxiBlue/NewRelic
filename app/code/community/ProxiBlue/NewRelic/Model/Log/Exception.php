@@ -53,7 +53,7 @@ class ProxiBlue_NewRelic_Model_Log_Exception extends ProxiBlue_NewRelic_Model_Ab
             $message = $e->getMessage();
             $message = (empty($message))?get_class($e):$message;
             if($setAppName) {
-                Mage::Helper('newrelic')->setAppName();
+                Mage::helper('proxiblue_newrelic')->setAppName();
             }    
             newrelic_notice_error ($message, $e);
         }    

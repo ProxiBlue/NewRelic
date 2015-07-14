@@ -42,7 +42,7 @@ class ProxiBlue_NewRelic_Block_Adminhtml_Dashboard_Tab_Newrelic extends Mage_Adm
     }
 
     public function getEmbededGraphs(){
-        $embeddedGraphs = unserialize(Mage::getStoreConfig('newrelic/embeded/graph'));
+        $embeddedGraphs = unserialize(Mage::getStoreConfig('proxiblue_newrelic/embeded/graph'));
         if (!is_array($embeddedGraphs)) {
             $embeddedGraphs = array();
         }
