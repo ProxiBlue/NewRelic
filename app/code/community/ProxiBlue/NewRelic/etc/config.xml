@@ -2,7 +2,7 @@
 <config>
     <modules>
         <ProxiBlue_NewRelic>
-            <version>0.1.16</version>
+            <version>1.0.0</version>
         </ProxiBlue_NewRelic>
     </modules>
     <global>

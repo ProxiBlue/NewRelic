@@ -101,7 +101,8 @@ class ProxiBlue_NewRelic_Model_Api extends ProxiBlue_NewRelic_Model_Abstract
     public function talkToNewRelic($restPoint)
     {
         $headers = array(
-            'x-api-key:' . $this->_api_key
+            'x-api-key:' . $this->_api_key,
+            'User-Agent:' . $this->_userAgentString
         );
         $http = new Varien_Http_Adapter_Curl();
 
