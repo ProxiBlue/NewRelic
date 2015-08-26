@@ -28,7 +28,7 @@
 0.1.15 - Add ability to trace methods. some error trapping in account details fetching
        - Record swatch cache clean
 0.1.16  - Fix some missed namespace changes
-1.0.0   - Make a full release version, its asbout time.
+1.0.0   - Make a full release version, its about time.
         - Ads in useragent string as per newrelic requirements
 
 Reproducing error for 0.0.4 bug release.
