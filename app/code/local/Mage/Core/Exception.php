@@ -94,7 +94,7 @@ class Mage_Core_Exception extends Exception {
                     $maxTraceItterations--;
                 }
             }
-            $newRelic = mage::getModel('proxiblue_newrelic/log_Exception');
+            $newRelic = Mage::getModel('proxiblue_newrelic/log_Exception');
             // make sure we have an object here!
             if (is_object($newRelic) && $newRelic instanceof ProxiBlue_NewRelic_Model_Log_Exception && $newRelic->getEnabled()) {
                 $newRelic->recordEvent($this);
