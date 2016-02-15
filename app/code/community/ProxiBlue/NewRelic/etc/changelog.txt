@@ -30,6 +30,7 @@
 0.1.16  - Fix some missed namespace changes
 1.0.0   - Make a full release version, its about time.
         - Ads in useragent string as per newrelic requirements
+1.0.1   - Fix namespace change template file not changed
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.
