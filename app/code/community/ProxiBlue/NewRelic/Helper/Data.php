@@ -71,7 +71,7 @@ class ProxiBlue_NewRelic_Helper_Data extends Mage_Core_Helper_Abstract {
             return preg_quote($ignore, '/');
         }, array_values($ignores));
 
-        $regexp = '/(' . implode('|', $quotedIgnoreArray) . ')/i';
+        $regexp = '/' . implode('|', $quotedIgnoreArray) . '/i';
         return (bool) preg_match($regexp, $message);
     }
     
