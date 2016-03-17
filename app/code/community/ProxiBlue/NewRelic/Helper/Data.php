@@ -67,7 +67,11 @@ class ProxiBlue_NewRelic_Helper_Data extends Mage_Core_Helper_Abstract {
      * @return bool
      */
     private function ignoreInString($message, $ignores) {
-        $regexp = '/(' . implode('|', array_values($ignores)) . ')/i';
+        $quotedIgnoreArray = array_map(function ($ignore) {
+            return preg_quote($ignore, '/');
+        }, array_values($ignores));
+
+        $regexp = '/' . implode('|', $quotedIgnoreArray) . '/i';
         return (bool) preg_match($regexp, $message);
     }
     
