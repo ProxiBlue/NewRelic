@@ -149,7 +149,9 @@ class ProxiBlue_NewRelic_Model_Observer {
                     foreach ($aProcessIds as $processId) {
                         /* @var $process Mage_Index_Model_Process */
                          $process = $indexer->getProcessById($processId);
-                         $newRelic->recordEvent($process->getIndexerCode());
+                         if($process) {
+                            $newRelic->recordEvent($process->getIndexerCode());
+                         }
                     }
                 } catch (Exception $e) {
                     Mage::logException($e);
