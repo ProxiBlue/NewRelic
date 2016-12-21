@@ -44,7 +44,7 @@ class ProxiBlue_NewRelic_Model_Log_Exception extends ProxiBlue_NewRelic_Model_Ab
     
     /**
      * Static since a store config exception (caused by a module config error) cannot call magento's model objects.
-     * If a store config exception occurs, the exception class logs it drect.
+     * If a store config exception occurs, the exception class logs it direct.
      * 
      * @param type $e
      */
@@ -54,7 +54,7 @@ class ProxiBlue_NewRelic_Model_Log_Exception extends ProxiBlue_NewRelic_Model_Ab
             $message = (empty($message))?get_class($e):$message;
             if($setAppName) {
                 Mage::Helper('newrelic')->setAppName();
-            }    
+            }
             newrelic_notice_error ($message, $e);
         }    
     }
