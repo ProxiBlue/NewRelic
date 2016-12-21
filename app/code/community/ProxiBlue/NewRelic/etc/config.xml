@@ -2,13 +2,13 @@
 <config>
     <modules>
         <ProxiBlue_NewRelic>
-            <version>0.1.13</version>
+            <version>1.0.2</version>
         </ProxiBlue_NewRelic>
     </modules>
     <global>
         <request>
             <direct_front_name>
-                <newrelic/>
+                <proxiblue_newrelic/>
             </direct_front_name>
         </request>
         <models>

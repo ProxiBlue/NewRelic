@@ -17,11 +17,11 @@
 	"map": [
 	    ["/app/code/community/ProxiBlue/NewRelic/", "/app/code/community/ProxiBlue/NewRelic/"],
 	    ["/app/etc/modules/ProxiBlue_NewRelic.xml", "/app/etc/modules/ProxiBlue_NewRelic.xml"],
-	    ["/app/design/adminhtml/default/default/template/dashboard/newrelic.phtml", "/app/design/adminhtml/default/default/template/dashboard/newrelic.phtml"],
+	    ["/app/design/adminhtml/default/default/template/dashboard/proxiblue_newrelic.phtml", "/app/design/adminhtml/default/default/template/dashboard/proxiblue_newrelic.phtml"],
 	    ["/app/code/local/Mage/Core/Exception.php", "/app/code/local/Mage/Core/Exception.php"],
 	    ["/js/newrelic.js", "/js/newrelic.js"],
-	    ["/app/design/adminhtml/default/default/template/newrelic/init_js.phtml", "/app/design/adminhtml/default/default/template/newrelic/init_js.phtml"],
-	    ["/app/design/adminhtml/default/default/layout/newrelic.xml", "/app/design/adminhtml/default/default/layout/newrelic.xml"]
+	    ["/app/design/adminhtml/default/default/template/proxiblue_newrelic/init_js.phtml", "/app/design/adminhtml/default/default/template/proxiblue_newrelic/init_js.phtml"],
+	    ["/app/design/adminhtml/default/default/layout/proxiblue_newrelic.xml", "/app/design/adminhtml/default/default/layout/proxiblue_newrelic.xml"]
 	]
     }
 }

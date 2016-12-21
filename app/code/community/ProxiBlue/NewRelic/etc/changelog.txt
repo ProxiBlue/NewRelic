@@ -17,7 +17,7 @@
       - Add license key field in admin, and adjust to populate correctly
 0.1.5 - Adjust Exception push to not set appName if error is pushed direct from exceptions.
 0.1.6 - Fix incorrect php closing tag - https://github.com/ProxiBlue/NewRelic/pull/10
-0.1.7 - Chnage way that charts are embeded into dashboard
+0.1.7 - Change way that charts are embeded into dashboard
 0.1.8 - Fix double >> in config.xml for closing tag
 0.1.9 - Fixed ajax requests for cases when store is installed into a subfolder
 0.1.10 - Deal better with store id not found when logging. Highlighted when commercebug module is also in use.
@@ -25,6 +25,13 @@
 0.1.12 - Remove activation of wishlist in setup. Not sure why it was there
 0.1.13 - Fix issue where admin pages are still sent to newrelic, even when admin is set to not log admin pages
 0.1.14 - Move namespace to proxiblue_newrelic
+0.1.15 - Add ability to trace methods. some error trapping in account details fetching
+       - Record swatch cache clean
+0.1.16  - Fix some missed namespace changes
+1.0.0   - Make a full release version, its about time.
+        - Ads in useragent string as per newrelic requirements
+1.0.1   - Fix namespace change template file not changed
+1.0.2   - Fix regex value escaping 
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.

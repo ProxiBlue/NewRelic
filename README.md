@@ -76,14 +76,11 @@ and change it to
 After this change you will find an entry for the ProxiBlue NewRelic Logger in the Firegento Logger list of available loggers, and you can then control logging to newRelic via the Firegento Logger system
 
 
-See our other modules:
+Our Premium extensions:
 ----------------------
-[Magento Gift Promotions](http://www.proxiblue.com.au/magento-gift-promotions.html)
+[Magento Free Gift Promotions](http://www.proxiblue.com.au/magento-gift-promotions.html "Magento Free Gift Promotions")
 The ultimate magento gift promotions module - clean code, and it just works!
 
-[Magento Dynamic Category products](http://www.proxiblue.com.au/magento-dynamic-category-products.html)
-Dynamically assign any product to a category, using just attributes. Easy to create any type of 'Shopy By...' categories.
-
-[Magento Mapped Category Banners](http://www.proxiblue.com.au/magento-mapped-category-banners.html)
-Map unlimited click areas on category banner images to products (or direct links) Use that lost retail space to sell!
+[Magento Dynamic Category Products](http://www.proxiblue.com.au/magento-dynamic-category-products.html "Magento Dynamic Category Products")
+Automate Category Product associations - assign any product to a category, using various rules.
 

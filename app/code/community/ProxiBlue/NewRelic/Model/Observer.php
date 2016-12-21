@@ -31,7 +31,10 @@ class ProxiBlue_NewRelic_Model_Observer {
     
     /**
      * Hook to record cache events
-     * @param Varien_Event_Observer $observer 
+     *
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this \ProxiBlue_NewRelic_Model_Observer
      */
 
     public function adminhtml_cache_refresh_type(Varien_Event_Observer $observer) {
@@ -45,7 +48,9 @@ class ProxiBlue_NewRelic_Model_Observer {
     
     /**
      * Hook to record cache full flush
-     * @param Varien_Event_Observer $observer 
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this \ProxiBlue_NewRelic_Model_Observer
      */
 
     public function adminhtml_cache_flush_all(Varien_Event_Observer $observer) {
@@ -59,7 +64,10 @@ class ProxiBlue_NewRelic_Model_Observer {
     
     /**
      * Hook to record cache storage
-     * @param Varien_Event_Observer $observer 
+     *
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this \ProxiBlue_NewRelic_Model_Observer
      */
 
     public function adminhtml_cache_flush_system(Varien_Event_Observer $observer) {
@@ -72,7 +80,10 @@ class ProxiBlue_NewRelic_Model_Observer {
     
     /**
      * Hook to record cache storage
-     * @param Varien_Event_Observer $observer 
+     *
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this \ProxiBlue_NewRelic_Model_Observer
      */
 
     public function clean_media_cache_after(Varien_Event_Observer $observer) {
@@ -82,11 +93,14 @@ class ProxiBlue_NewRelic_Model_Observer {
             return $this;
         }
     }
-    
-    
+
+
     /**
      * Hook to record cache storage
-     * @param Varien_Event_Observer $observer 
+     *
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this \ProxiBlue_NewRelic_Model_Observer
      */
 
     public function clean_catalog_images_cache_after(Varien_Event_Observer $observer) {
@@ -96,13 +110,31 @@ class ProxiBlue_NewRelic_Model_Observer {
             return $this;
         }
     }
-    
-    
+
+    /**
+     * Hook to record swatch image cache
+     *
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this \ProxiBlue_NewRelic_Model_Observer
+     */
+
+    public function clean_configurable_swatches_cache_after(Varien_Event_Observer $observer) {
+        if (Mage::getStoreConfig('newrelic/settings/record_cache')) {
+            $newRelic = Mage::getModel('proxiblue_newrelic/cache');
+            $newRelic->recordEvent('swatch');
+            return $this;
+        }
+    }
+
+
 
     /**
      * Hook to record index events
+     *
      * @param Varien_Event_Observer $observer
-     * @return \ProxiBlue_NewRelic_Model_Observer 
+     *
+     * @return $this \ProxiBlue_NewRelic_Model_Observer
      */
     public function controller_action_postdispatch_adminhtml_process_massReindex(Varien_Event_Observer $observer) {
         if (Mage::getStoreConfig('newrelic/settings/record_index')) {
@@ -117,7 +149,9 @@ class ProxiBlue_NewRelic_Model_Observer {
                     foreach ($aProcessIds as $processId) {
                         /* @var $process Mage_Index_Model_Process */
                          $process = $indexer->getProcessById($processId);
-                         $newRelic->recordEvent($process->getIndexerCode());
+                         if($process) {
+                            $newRelic->recordEvent($process->getIndexerCode());
+                         }
                     }
                 } catch (Exception $e) {
                     Mage::logException($e);

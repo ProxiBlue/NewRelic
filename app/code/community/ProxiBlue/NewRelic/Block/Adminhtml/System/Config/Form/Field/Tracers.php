@@ -20,32 +20,24 @@
 <?php
 
 /**
- * Admin DashBoard Graphs
+ * Admin form field Ignore Message
  * 
  * @category   ProxiBlue
  * @package    ProxiBlue_NewRelic
  * @author     Lucas van Staden (support@proxiblue.com.au)
  **/
 
-class ProxiBlue_NewRelic_Block_Adminhtml_Dashboard_Tab_Newrelic extends Mage_Adminhtml_Block_Dashboard_Abstract
-{     
-    /**
-     * Initialize object
-     *
-     * @return void
-     */
+class ProxiBlue_NewRelic_Block_Adminhtml_System_Config_Form_Field_Tracers
+    extends Mage_Adminhtml_Block_System_Config_Form_Field_Array_Abstract
+{
     public function __construct()
     {
-        $this->setHtmlId('newrelic');
+        $this->addColumn('string', array(
+            'label' => Mage::helper('proxiblue_newrelic')->__('class::method'),
+            'style' => 'width:400px',
+        ));
+        $this->_addAfter = false;
+        $this->_addButtonLabel = Mage::helper('proxiblue_newrelic')->__('New Tracer');
         parent::__construct();
-        $this->setTemplate('dashboard/proxiblue_newrelic.phtml');
-    }
-
-    public function getEmbededGraphs(){
-        $embeddedGraphs = unserialize(Mage::getStoreConfig('proxiblue_newrelic/embeded/graph'));
-        if (!is_array($embeddedGraphs)) {
-            $embeddedGraphs = array();
-        }
-        return $embeddedGraphs;
     }
 }

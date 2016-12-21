@@ -35,8 +35,11 @@ class ProxiBlue_NewRelic_Model_Abstract {
     protected $_api_key;
     protected $_data_key;
     protected $_enabled = true;
+    protected $_userAgentString = 'ProxiBlue NewRelic for Magento';
 
     public function __construct() {
+        $this->_userAgentString .= '/' . $this->getExtensionVersion();
+        $this->_userAgentString .= ' (https://github.com/ProxiBlue/NewRelic)';
         try {
             $this->setDefaults();
         } catch (Mage_Core_Model_Store_Exception $e) {
@@ -119,7 +122,8 @@ class ProxiBlue_NewRelic_Model_Abstract {
      */
     public function talkToNewRelic($data) {
         $headers = array(
-            'x-api-key:' . $this->_api_key
+            'x-api-key:' . $this->_api_key,
+            'User-Agent:' . $this->_userAgentString
         );
         $http = new Varien_Http_Adapter_Curl();
         $http->write('POST', 'https://rpm.newrelic.com/deployments.xml', '1.1', $headers, $data);
@@ -127,5 +131,11 @@ class ProxiBlue_NewRelic_Model_Abstract {
         $response = Zend_Http_Response::extractBody($response);
         return $response;
     }
+
+    public function getExtensionVersion()
+    {
+        return (string) Mage::getConfig()->getNode()->modules->ProxiBlue_NewRelic->version;
+    }
+
 
 }
