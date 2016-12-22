@@ -1,7 +1,7 @@
 <?php
 
 /**
- *    This file is part of ProxiBlue NewRelic Module  available via GitHub https://github.com/ProxiBlue/NewRelic     
+ *    This file is part of ProxiBlue NewRelic Module  available via GitHub https://github.com/ProxiBlue/NewRelic
  *
  *    ProxiBlue NewRelic Module is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
  *    GNU General Public License for more details.
  *
  *    You should have received a copy of the GNU General Public License
- *    along with ProxiBlue NewRelic Module.  
+ *    along with ProxiBlue NewRelic Module.
  *    If not, see <http://www.gnu.org/licenses/>.
  * */
 ?>
@@ -22,12 +22,13 @@
 
 /**
  * Base functions to communicate with new relic
- * 
+ *
  * @category   ProxiBlue
  * @package    ProxiBlue_NewRelic
  * @author     Lucas van Staden (support@proxiblue.com.au)
  * */
-class ProxiBlue_NewRelic_Model_Abstract {
+class ProxiBlue_NewRelic_Model_Abstract
+{
 
     protected $_eventType = 'Unknown';
     protected $_headers;
@@ -37,7 +38,8 @@ class ProxiBlue_NewRelic_Model_Abstract {
     protected $_enabled = true;
     protected $_userAgentString = 'ProxiBlue NewRelic for Magento';
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->_userAgentString .= '/' . $this->getExtensionVersion();
         $this->_userAgentString .= ' (https://github.com/ProxiBlue/NewRelic)';
         try {
@@ -48,7 +50,7 @@ class ProxiBlue_NewRelic_Model_Abstract {
             $this->setDefaults(0);
         } catch (Exception $e) {
             $this->_enabled = false;
-            mage::logException($e);
+            Mage::logException($e);
         }
         if (empty($this->_account_Id) || empty($this->_api_key) || empty($this->_data_key)) {
             $this->_enabled = false;
@@ -59,7 +61,8 @@ class ProxiBlue_NewRelic_Model_Abstract {
      * Try and load the newrelic configuration for store
      * @param type $store
      */
-    private function setDefaults($store = null) {
+    private function setDefaults($store = null)
+    {
         $this->_account_Id = Mage::getStoreConfig('newrelic/api/account_id', $store);
         $this->_api_key = Mage::getStoreConfig('newrelic/api/api_key', $store);
         $this->_data_key = Mage::getStoreConfig('newrelic/api/data_access_key', $store);
@@ -69,16 +72,18 @@ class ProxiBlue_NewRelic_Model_Abstract {
      * If configuration is not set, this will result in false
      * @return type
      */
-    public function getEnabled() {
+    public function getEnabled()
+    {
         return $this->_enabled;
     }
 
     /**
      * Record index events via curl
      * @param string $type
-     * @return \ProxiBlue_NewRelic_Model_Observer 
+     * @return \ProxiBlue_NewRelic_Model_Observer
      */
-    public function recordEvent($message) {
+    public function recordEvent($message)
+    {
         $type = $this->_eventType . ": " . $message;
         $application_name = Mage::getStoreConfig('newrelic/api/application_name');
         $user = $this->getCurrentUser();
@@ -89,7 +94,9 @@ class ProxiBlue_NewRelic_Model_Abstract {
         try {
             $response = $this->talkToNewRelic($data);
             if (Mage::app()->getStore()->isAdmin() && !empty($response)) {
-                Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('adminhtml')->__("Event recorded in NewRelic : " . $type));
+                Mage::getSingleton('adminhtml/session')->addSuccess(
+                    Mage::helper('adminhtml')->__("Event recorded in NewRelic : " . $type)
+                );
             }
         } catch (Exception $e) {
             throw ProxiBlue_NewRelic_Exception($e);
@@ -100,27 +107,33 @@ class ProxiBlue_NewRelic_Model_Abstract {
     /**
      * Get the current user, be it admin or frontend
      */
-    public function getCurrentUser() {
+    public function getCurrentUser()
+    {
         if (Mage::app()->getStore()->isAdmin()) {
             if (is_object(Mage::getSingleton('admin/session')->getUser())) {
                 return Mage::getSingleton('admin/session')->getUser()->getEmail();
             } else {
                 return 'Shell Script';
             }
-        } else if (Mage::getSingleton('customer/session')->isLoggedIn()) {
-            return Mage::getSingleton('customer/session')->getCustomer()->getId() . ' / ' . Mage::getSingleton('customer/session')->getCustomer()->getEmail();
         } else {
-            return 'Guest User - not Logged in';
+            if (Mage::getSingleton('customer/session')->isLoggedIn()) {
+                return Mage::getSingleton('customer/session')->getCustomer()->getId() . ' / ' . Mage::getSingleton(
+                    'customer/session'
+                )->getCustomer()->getEmail();
+            } else {
+                return 'Guest User - not Logged in';
+            }
         }
     }
 
     /**
      * Talk to NewRelic API
-     * 
+     *
      * @param array $data
      * @return string
      */
-    public function talkToNewRelic($data) {
+    public function talkToNewRelic($data)
+    {
         $headers = array(
             'x-api-key:' . $this->_api_key,
             'User-Agent:' . $this->_userAgentString
@@ -134,7 +147,7 @@ class ProxiBlue_NewRelic_Model_Abstract {
 
     public function getExtensionVersion()
     {
-        return (string) Mage::getConfig()->getNode()->modules->ProxiBlue_NewRelic->version;
+        return (string)Mage::getConfig()->getNode()->modules->ProxiBlue_NewRelic->version;
     }
 
 

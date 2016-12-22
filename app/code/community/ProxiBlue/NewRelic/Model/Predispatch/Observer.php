@@ -53,7 +53,7 @@ class ProxiBlue_NewRelic_Model_PreDispatch_Observer
 
                     return $this;
                 }
-                if (mage::helper('proxiblue_newrelic')->ignoreModule($request->getModuleName()) === true) {
+                if (Mage::helper('proxiblue_newrelic')->ignoreModule($request->getModuleName()) === true) {
                     Mage::helper('proxiblue_newrelic')->setAppName(false);
                     newrelic_ignore_transaction();
                     newrelic_ignore_apdex();
@@ -62,9 +62,8 @@ class ProxiBlue_NewRelic_Model_PreDispatch_Observer
                 }
                 if (Mage::getStoreConfig('newrelic/settings/named_transactions')) {
                     $route
-                        =
-                        $request->getRouteName() . '/' . $request->getControllerName() . '/' . $request->getActionName(
-                        );
+                        = $request->getRouteName() . '/' . $request->getControllerName() . '/'
+                        . $request->getActionName();
                     if (Mage::getStoreConfig('newrelic/settings/add_module_to_named_transactions')) {
                         $route .= ' (module: ' . $request->getModuleName() . ')';
                     }
@@ -82,14 +81,14 @@ class ProxiBlue_NewRelic_Model_PreDispatch_Observer
                 }
             }
         } catch (Exception $e) {
-            mage::logException($e);
+            Mage::logException($e);
         }
     }
 
     /**
      * Reformat the config array
      *
-     * @param array  $item
+     * @param array $item
      * @param string $key
      */
     public function cleanTacerList(&$item, $key)

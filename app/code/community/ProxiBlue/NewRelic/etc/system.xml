@@ -88,15 +88,15 @@
                             <show_in_store>1</show_in_store>
                         </application_name>
                     </fields>
-                </api>    
-                <settings translate="label"> 
+                </api>
+                <settings translate="label">
                     <label>Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <fields>     
+                    <fields>
                         <record_cache translate="label">
                             <label>Record Cache Events</label>
                             <comment><![CDATA[Enable to record cache clear events on NewRelic Graph]]></comment>
@@ -219,14 +219,14 @@
                         </custom_tracers>
                     </fields>
                 </settings>
-                <metrics translate="label"> 
+                <metrics translate="label">
                     <label>Metrics</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>3</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <fields>     
+                    <fields>
                         <signup_success translate="label">
                             <label>Record Customer Signup Success</label>
                             <comment><![CDATA[Enable to record customer signup metrics]]></comment>
@@ -265,7 +265,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                                <comment><![CDATA[<a target="_blank" href="http://www.proxiblue.com.au/new-relic-get-graph-urls">How to find your graph urls</a>]]></comment>
+                            <comment><![CDATA[<a target="_blank" href="http://www.proxiblue.com.au/new-relic-get-graph-urls">How to find your graph urls</a>]]></comment>
                         </graph>
 
                     </fields>
