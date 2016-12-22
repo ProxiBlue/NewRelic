@@ -33,13 +33,14 @@ class ProxiBlue_NewRelic_Block_Adminhtml_System_Config_Form_Field_Button_Appname
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
     {
         $this->setElement($element);
-        
+        $url = Mage::helper("adminhtml")->getUrl("proxiblue_newrelic/api/names/",array('id'=>Mage::getStoreConfig('newrelic/api/api_key')));
+
 
         $html = $this->getLayout()->createBlock('adminhtml/widget_button')
                     ->setType('button')
                     ->setClass('scalable')
                     ->setLabel('Fetch Application Names')
-                    ->setOnClick("fetchApplicationNames()")
+                    ->setOnClick("fetchApplicationNames('{$url}')")
                     ->toHtml();
 
         $html .= $this->addActionJs();

@@ -9,8 +9,8 @@ Array.prototype.remove = function() {
     return this;
 };
 
-function fetchApplicationNames() {
-    new Ajax.Request(newrelic_base_url + 'proxiblue_newrelic/api/names/key/'+$('newrelic_api_api_key').value, {
+function fetchApplicationNames(url) {
+    new Ajax.Request(url, {
         onSuccess: function(response) {
             var json = response.responseText.evalJSON();
             if(json.error) {
@@ -38,8 +38,8 @@ function fetchApplicationNames() {
     });
 }
 
-function fetchAccountDetails() {
-    new Ajax.Request(newrelic_base_url + 'proxiblue_newrelic/api/accountDetails/key/'+$('newrelic_api_api_key').value, {
+function fetchAccountDetails(url) {
+    new Ajax.Request(url, {
         onSuccess: function(response) {
             var json = response.responseText.evalJSON();
             if(json.error) {
