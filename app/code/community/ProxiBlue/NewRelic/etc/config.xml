@@ -2,7 +2,7 @@
 <config>
     <modules>
         <ProxiBlue_NewRelic>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
         </ProxiBlue_NewRelic>
     </modules>
     <global>
@@ -136,4 +136,15 @@
             </proxiblue_newrelic>
         </routers>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <proxiblue_newrelic after="Mage_Adminhtml">ProxiBlue_NewRelic</proxiblue_newrelic>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>
