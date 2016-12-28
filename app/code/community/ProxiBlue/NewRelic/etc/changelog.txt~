@@ -33,7 +33,7 @@
 1.0.1   - Fix namespace change template file not changed
 1.0.2   - Fix regex value escaping 
 1.0.3	- change how api admin url is done in config settings
-1.0.4	- Change admin controller and how url is created for config buttons with correct admin controllers
+1.0.4	- Change admin controller and how url is crated for config buttons
 
 Reproducing error for 0.0.4 bug release.
 In any app/etc/module/ config xml file place a depends to a non-existing module.
