@@ -1,6 +1,12 @@
 NewRelic
 ========
 
+NOTE: NewRelic depricated teh Data Access key (and most likely the API with it)
+This module is most likely no longer functional, and I have no time to update it ongoing. 
+
+It is now simply here for historical purposes
+
+
 Magento New Relic Integration
 http://www.proxiblue.com.au/newrelic-magento-integration.html
 
